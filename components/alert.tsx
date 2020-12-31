@@ -4,7 +4,8 @@ import Container from './container'
 import { EXAMPLE_PATH } from '../lib/constants'
 
 type Props = {
-  preview: false
+  // eslint-disable-next-line react/require-default-props
+  preview?: Boolean
 }
 
 const Alert = ({ preview }: Props) => (

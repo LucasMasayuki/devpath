@@ -4,7 +4,8 @@ import Footer from './footer'
 import Meta from './meta'
 
 type Props = {
-  preview: false
+  // eslint-disable-next-line react/require-default-props
+  preview?: Boolean
   children: React.ReactNode
 }
 
