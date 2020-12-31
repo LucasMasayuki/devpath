@@ -5,7 +5,8 @@ import React from 'react'
 type Props = {
   title: string
   src: string
-  slug: ''
+  // eslint-disable-next-line react/require-default-props
+  slug?: string
 }
 
 const CoverImage = ({ title, src, slug }: Props) => {
