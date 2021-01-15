@@ -1,10 +1,10 @@
 import React from 'react'
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import PostTitle from './post-title'
-import Author from '../types/author'
-import PostViews from './post-views'
+import { Avatar, Box } from '@chakra-ui/react'
+import DateFormatter from '@/components/date-formatter'
+import CoverImage from '@/components/cover-image'
+import PostTitle from '@/components/post-title'
+import Author from '@/types/author'
+import PostViews from '@/components/post-views'
 
 type Props = {
   title: string;
@@ -16,22 +16,21 @@ type Props = {
 
 const PostHeader = ({ title, coverImage, date, author, views }: Props) => (
   <>
-    <PostTitle>{title}</PostTitle>
-    <div className="hidden md:block md:mb-12">
-      <Avatar name={author.name} picture={author.picture} />
-    </div>
-    <div className="mb-8 md:mb-16 sm:mx-0">
-      <CoverImage title={title} src={coverImage} />
-    </div>
-    <div className="max-w-2xl mx-auto">
-      <div className="block md:hidden mb-6">
-        <Avatar name={author.name} picture={author.picture} />
-      </div>
-      <div className="mb-6 text-lg">
-        <DateFormatter dateString={date} /> -{' '}
-        <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
-      </div>
-    </div>
+    <Box pl={6} pr={6}>
+      <PostTitle>{title}</PostTitle>
+      <Box h={400} w="100%" position="relative">
+        <CoverImage title={title} src={coverImage} />
+      </Box>
+      <Box>
+        <Box mb={4}>
+          <DateFormatter dateString={date} /> -{' '}
+          <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
+        </Box>
+        <Box>
+          <Avatar size="sm" name={author.name} src={author.picture} />
+        </Box>
+      </Box>
+    </Box>
   </>
 )
 

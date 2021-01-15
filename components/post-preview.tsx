@@ -1,20 +1,29 @@
 import Link from 'next/link'
 import React from 'react'
-import useFetch from '@/lib/fetcher'
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import Author from '../types/author'
-import PostViews from './post-views'
+import {
+  Avatar,
+  Box,
+  Link as ChakraLink,
+  Text,
+  HStack,
+  Spacer,
+  Flex,
+  Heading,
+} from '@chakra-ui/react'
+
+import DateFormatter from '@/components/date-formatter'
+import CoverImage from '@/components/cover-image'
+import PostViews from '@/components/post-views'
+import Author from '@/types/author'
 
 type Props = {
-  title: string;
-  coverImage: string;
-  date: string;
-  excerpt: string;
-  author: Author;
-  slug: string;
-};
+  title: string
+  coverImage: string
+  date: string
+  excerpt: string
+  author: Author
+  slug: string
+}
 
 const PostPreview = ({
   title,
@@ -25,28 +34,59 @@ const PostPreview = ({
   slug,
 }: Props) => {
   
+  // const { data } = useFetch(`/api/page-views-preview?id=${slug}`, true)
 
-  const { data } = useFetch(`/api/page-views-preview?id=${slug}`, true)
-
-  const views = data?.total
+  // const views = data?.total
+  const views = 0
 
   return (
-    <div>
-      <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
-      </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="hover:underline">{title}</a>
-        </Link>
-      </h3>
-      <div className="text-lg mb-4">
-        <DateFormatter dateString={date} /> -{' '}
-        <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
-      </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
-    </div>
+    <Box
+      borderWidth="1px"
+      borderRadius="lg"
+      overflow="hidden"
+      bgGradient="linear(to-r, #EB3349, #F45C43)"
+      shadow="1px 1px #b7b7b7"
+      color="white"
+      m={4}
+    >
+      <Box h={200} w="100%" position="relative">
+        <CoverImage title={title} src={coverImage} slug={slug} />
+      </Box>
+      <Box p="6">
+        <Flex direction="column">
+          <Box>
+            <Heading
+              mt="1"
+              fontWeight="semibold"
+              as="h3"
+              lineHeight="tight"
+            >
+              <Link as={`/posts/${slug}`} href="/posts/[slug]">
+                <ChakraLink>{title}</ChakraLink>
+              </Link>
+            </Heading>
+          </Box>
+          <Spacer />
+          <Box>
+            <HStack spacing="8px">
+              <Avatar size="sm" name={author.name} src={author.picture} />
+              <Box as="span" fontSize="sm">
+                {author.name}
+              </Box>
+            </HStack>
+          </Box>
+          <Spacer />
+          <Box>
+            <DateFormatter dateString={date} /> -{' '}
+            <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
+          </Box>
+          <Spacer />
+          <Box>
+            <Text noOfLines={3} isTruncated>{excerpt}</Text>
+          </Box>
+        </Flex>
+      </Box>
+    </Box>
   )
 }
 

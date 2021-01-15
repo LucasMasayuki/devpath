@@ -1,5 +1,5 @@
-import cn from 'classnames'
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 
 type Props = {
@@ -9,27 +9,14 @@ type Props = {
   slug?: string
 }
 
-const CoverImage = ({ title, src, slug }: Props) => {
-  const image = (
-    <img
-      src={src}
-      alt={`Cover Image for ${title}`}
-      className={cn('shadow-small', {
-        'hover:shadow-medium transition-shadow duration-200': slug,
-      })}
-    />
+const CoverImage = ({ title, src, slug }: Props) => (
+  slug ? (
+    <Link as={`/posts/${slug}`} href="/posts/[slug]">
+      <Image layout="fill" src={src} alt={`Cover Image for ${title}`} />
+    </Link>
+  ) : (
+    <Image layout="fill" src={src} alt={`Cover Image for ${title}`} />
   )
-  return (
-    <div className="sm:mx-0">
-      {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a aria-label={title}>{image}</a>
-        </Link>
-      ) : (
-        image
-      )}
-    </div>
-  )
-}
+)
 
 export default CoverImage
