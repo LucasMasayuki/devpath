@@ -14,8 +14,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       .collection('pageviews')
       .findOne({ slug })
 
-    let total = 0
-    if(pageViewBySlug) {
+      console.log(pageViewBySlug)
+      let total = 0
+    if(pageViewBySlug !== undefined && pageViewBySlug !== null) {
       total = pageViewBySlug.total + 1
       await db.collection('pageviews').updateOne({ slug }, { $set: { total }})
     } else {

@@ -1,7 +1,12 @@
 import { AppProps } from 'next/app'
-import '../styles/index.css'
 import React from 'react'
+import ThemeContainer from '@/contexts/theme/ThemeContainer'
+import '@/styles/css/markdown-styles.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeContainer>
+      <Component {...pageProps} />
+    </ThemeContainer>
+  )
 }

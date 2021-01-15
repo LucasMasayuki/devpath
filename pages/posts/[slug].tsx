@@ -3,26 +3,24 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 import React from 'react'
 
-import useFetch from '../../lib/fetcher'
-import Container from '../../components/container'
-import PostBody from '../../components/post-body'
-import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
-import Layout from '../../components/layout'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
-import { CMS_NAME } from '../../lib/constants'
-import markdownToHtml from '../../lib/markdownToHtml'
-import PostType from '../../types/post'
+import { Box } from '@chakra-ui/react'
+import PostBody from '@/components/post-body'
+import useFetch from '@/lib/fetcher'
 
+import AppBar from '@/components/app-bar'
+import Layout from '@/components/layout'
+import { getPostBySlug, getAllPosts } from '@/lib/api'
+import PostTitle from '@/components/post-title'
+import markdownToHtml from '@/lib/markdownToHtml'
+import PostType from '@/types/post'
+import PostHeader from '@/components/post-header'
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+// eslint-disable-next-line no-unused-vars
+const Post = ({ post }: Props) => {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -31,17 +29,17 @@ const Post = ({ post, morePosts, preview }: Props) => {
   const { data } = useFetch(`/api/page-views?id=${post.slug}`)
 
   return (
-    <Layout preview={preview}>
-      <Container>
-        <Header />
+    <Layout>
+      <Box>
+        <AppBar />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <Box mt={4} mb={20}>
               <Head>
                 <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
+                  {post.title}
                 </title>
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
@@ -53,10 +51,10 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 views={data?.total}
               />
               <PostBody content={post.content} />
-            </article>
+            </Box>
           </>
         )}
-      </Container>
+      </Box>
     </Layout>
   )
 }
@@ -79,6 +77,7 @@ export async function getStaticProps({ params }: Params) {
     'ogImage',
     'coverImage',
   ])
+
   const content = await markdownToHtml(post.content || '')
 
   return {
