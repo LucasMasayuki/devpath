@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostHeader should render PostHeader 1`] = `
+<div
+  className="css-1fpx25h"
+>
+  <h1
+    className="chakra-heading css-1dwxp6k"
+  >
+    test
+  </h1>
+  <div
+    className="css-19dv3nn"
+  >
+    <div
+      style={
+        Object {
+          "bottom": 0,
+          "boxSizing": "border-box",
+          "display": "block",
+          "left": 0,
+          "margin": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <img
+        alt="Cover Image for test"
+        decoding="async"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          Object {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "visibility": "hidden",
+            "width": 0,
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="css-0"
+  >
+    <div
+      className="css-1itv5e3"
+    >
+      <time
+        dateTime="2019-01-01"
+      >
+        January	1, 2019
+      </time>
+       -
+       
+      <svg
+        className="chakra-icon css-zmpx8u"
+        focusable={false}
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="currentColor"
+        >
+          <path
+            d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="2"
+          />
+        </g>
+      </svg>
+      <small>
+        1 views
+      </small>
+    </div>
+    <div
+      className="css-0"
+    >
+      <span
+        className="chakra-avatar css-1ruhx4w"
+      >
+        <div
+          aria-label="test"
+          className="chakra-avatar__initials css-0"
+        >
+          t
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+`;

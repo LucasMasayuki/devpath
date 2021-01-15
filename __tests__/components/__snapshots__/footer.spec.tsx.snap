@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render Footer 1`] = `
+<footer>
+  <div
+    className="css-1m318of"
+  >
+    <div
+      className="css-1xhj18k"
+    >
+      <p
+        className="chakra-text css-0"
+      >
+        DevPath
+      </p>
+      <div
+        className="css-17xejub"
+      />
+      <p
+        className="chakra-text css-0"
+      >
+        Created by Lucas Masayuki
+      </p>
+    </div>
+  </div>
+</footer>
+`;

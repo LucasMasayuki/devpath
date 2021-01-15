@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post should render Post page 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "background": "#fff",
+      "color": "#000",
+      "display": "flex",
+      "flexDirection": "column",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, Roboto, \\"Segoe UI\\", \\"Fira Sans\\", Avenir, \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif",
+      "height": "100vh",
+      "justifyContent": "center",
+      "textAlign": "center",
+    }
+  }
+>
+  <div>
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "body { margin: 0 }",
+        }
+      }
+    />
+    <h1
+      style={
+        Object {
+          "borderRight": "1px solid rgba(0, 0, 0,.3)",
+          "display": "inline-block",
+          "fontSize": "24px",
+          "fontWeight": 500,
+          "margin": 0,
+          "marginRight": "20px",
+          "padding": "10px 23px 10px 0",
+          "verticalAlign": "top",
+        }
+      }
+    >
+      404
+    </h1>
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+          "height": "49px",
+          "lineHeight": "49px",
+          "textAlign": "left",
+          "verticalAlign": "middle",
+        }
+      }
+    >
+      <h2
+        style={
+          Object {
+            "fontSize": "14px",
+            "fontWeight": "normal",
+            "lineHeight": "inherit",
+            "margin": 0,
+            "padding": 0,
+          }
+        }
+      >
+        This page could not be found
+        .
+      </h2>
+    </div>
+  </div>
+</div>
+`;

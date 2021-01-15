@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index should render Index 1`] = `
+Array [
+  <main>
+    <div
+      className="css-173ple2"
+    >
+      <div
+        className="css-k008qs"
+      >
+        <div
+          className="css-iufztw"
+        >
+          <h2
+            className="chakra-heading css-in3yi3"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            DEVPATH
+          </h2>
+        </div>
+        <div
+          className="css-17xejub"
+        />
+        <div
+          className="css-0"
+        >
+          <button
+            aria-label="Menu"
+            className="chakra-button css-1kgd4fd"
+            onClick={[Function]}
+            type="button"
+          >
+            <svg
+              aria-hidden={true}
+              className="chakra-icon css-onkibi"
+              focusable={false}
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="css-j7qwjs"
+    >
+      <div
+        className="css-15jqh4k"
+      >
+        <div
+          className="css-1fo89uv"
+        >
+          <div
+            style={
+              Object {
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "left": 0,
+                "margin": 0,
+                "overflow": "hidden",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <img
+              alt="Cover Image for test"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "visibility": "hidden",
+                  "width": 0,
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          className="css-n16x53"
+        >
+          <div
+            className="css-j7qwjs"
+          >
+            <div
+              className="css-0"
+            >
+              <h3
+                className="chakra-heading css-1dv4iqg"
+              >
+                <a
+                  className="chakra-link css-0"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                >
+                  test
+                </a>
+              </h3>
+            </div>
+            <div
+              className="css-17xejub"
+            />
+            <div
+              className="css-0"
+            >
+              <div
+                className="chakra-stack css-180nsro"
+              >
+                <span
+                  className="chakra-avatar css-1ruhx4w"
+                >
+                  <div
+                    aria-label="test"
+                    className="chakra-avatar__initials css-0"
+                  >
+                    t
+                  </div>
+                </span>
+                <span
+                  className="css-g5hezf"
+                >
+                  test
+                </span>
+              </div>
+            </div>
+            <div
+              className="css-17xejub"
+            />
+            <div
+              className="css-0"
+            >
+              <time
+                dateTime="1996-10-02"
+              >
+                October	2, 1996
+              </time>
+               -
+               
+              <svg
+                className="chakra-icon css-zmpx8u"
+                focusable={false}
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="currentColor"
+                >
+                  <path
+                    d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="2"
+                  />
+                </g>
+              </svg>
+              <small>
+                0 views
+              </small>
+            </div>
+            <div
+              className="css-17xejub"
+            />
+            <div
+              className="css-0"
+            >
+              <p
+                className="chakra-text css-1aayjs6"
+              >
+                test
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="css-1m318of"
+    >
+      <div
+        className="css-1xhj18k"
+      >
+        <p
+          className="chakra-text css-0"
+        >
+          DevPath
+        </p>
+        <div
+          className="css-17xejub"
+        />
+        <p
+          className="chakra-text css-0"
+        >
+          Created by Lucas Masayuki
+        </p>
+      </div>
+    </div>
+  </footer>,
+]
+`;

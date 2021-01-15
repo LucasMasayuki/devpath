@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostTitle should render PostTitle 1`] = `
+<h1
+  className="chakra-heading css-1dwxp6k"
+>
+  <div>
+    title
+  </div>
+</h1>
+`;

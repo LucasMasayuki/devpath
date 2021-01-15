@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoverImage should render CoverImage 1`] = `
+<div
+  style={
+    Object {
+      "bottom": 0,
+      "boxSizing": "border-box",
+      "display": "block",
+      "left": 0,
+      "margin": 0,
+      "overflow": "hidden",
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <img
+    alt="Cover Image for test"
+    decoding="async"
+    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+    style={
+      Object {
+        "border": "none",
+        "bottom": 0,
+        "boxSizing": "border-box",
+        "display": "block",
+        "height": 0,
+        "left": 0,
+        "margin": "auto",
+        "maxHeight": "100%",
+        "maxWidth": "100%",
+        "minHeight": "100%",
+        "minWidth": "100%",
+        "objectFit": undefined,
+        "objectPosition": undefined,
+        "padding": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "visibility": "hidden",
+        "width": 0,
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateFormatter should render formatted time 1`] = `
+<time
+  dateTime="1999-03-01"
+>
+  March	1, 1999
+</time>
+`;

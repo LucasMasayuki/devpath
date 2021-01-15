@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostBody should render PostBody 1`] = `
+<div
+  className="css-0"
+>
+  <div
+    class="markdown"
+    className="css-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<div>test</div>",
+      }
+    }
+  />
+</div>
+`;
