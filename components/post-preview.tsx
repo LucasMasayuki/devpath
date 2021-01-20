@@ -66,8 +66,7 @@ const PostPreview = ({
               </Link>
             </Heading>
           </Box>
-          <Spacer />
-          <Box>
+          <Box mt="4">
             <HStack spacing="8px">
               <Avatar size="sm" name={author.name} src={author.picture} />
               <Box as="span" fontSize="sm">
@@ -75,13 +74,11 @@ const PostPreview = ({
               </Box>
             </HStack>
           </Box>
-          <Spacer />
-          <Box>
+          <Box mt="1">
             <DateFormatter dateString={date} /> -{' '}
             <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
           </Box>
-          <Spacer />
-          <Box>
+          <Box mt="4">
             <Text noOfLines={3} isTruncated>{excerpt}</Text>
           </Box>
         </Flex>

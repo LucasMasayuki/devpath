@@ -5,7 +5,7 @@ const Footer = () => (
   <footer>
     <Box 
       bgGradient="linear(to-r, #EB3349, #F45C43)"
-      h={100} 
+      h={50} 
       color="white"
       p={4}
     >
