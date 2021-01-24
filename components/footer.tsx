@@ -12,16 +12,13 @@ const Footer = (): JSX.Element => (
       </Flex>
 
       <Grid templateColumns="repeat(5, 1fr)" gap={4}>
-        <GridItem colStart={5} colEnd={6}>
-          <Flex direction="row">
-            <Link href="https://github.com/LucasMasayuki" isExternal>
-              <IconButton variant="none" aria-label="My personal github" icon={<Icon as={FaGithub} />} size="lg" />
-            </Link>
-            <Spacer />
-            <Link href="https://br.linkedin.com/in/lucas-tamaribuchi" isExternal>
-              <IconButton variant="none" aria-label="My Linkedin" icon={<Icon as={FaLinkedin} />} size="lg" />
-            </Link>
-          </Flex>
+        <GridItem colStart={6} colEnd={6}>
+          <Link href="https://github.com/LucasMasayuki" isExternal>
+            <IconButton variant="none" aria-label="My personal github" icon={<Icon as={FaGithub} />} size="lg" />
+          </Link>
+          <Link href="https://br.linkedin.com/in/lucas-tamaribuchi" isExternal>
+            <IconButton variant="none" aria-label="My Linkedin" icon={<Icon as={FaLinkedin} />} size="lg" />
+          </Link>
         </GridItem>
       </Grid>
     </Box>
