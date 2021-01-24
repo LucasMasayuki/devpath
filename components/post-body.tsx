@@ -7,7 +7,7 @@ type Props = {
 
 const PostBody = ({ content }: Props) => (
   <Box>
-    <Box class="markdown" dangerouslySetInnerHTML={{ __html: content }}/>
+    <Box class="markdown" dangerouslySetInnerHTML={{ __html: content }} />
   </Box>
 )
 

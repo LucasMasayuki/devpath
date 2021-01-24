@@ -1,13 +1,19 @@
 {
   "env": {
     "browser": true,
-    "es2021": true,
-    "jest/globals": true
+    "es2021": true
   },
   "extends": [
     "airbnb",
     "prettier/react",
-    "prettier"
+    "prettier",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:import/typescript"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -31,6 +37,23 @@
     }
   },
   "rules": {
+    "prettier/prettier": "error",
+    "prefer-const": ["error", {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+    }],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+          "ignoredNodes": ["TemplateLiteral > *"],
+          "SwitchCase": 1
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {
@@ -43,7 +66,6 @@
     ],
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
-    "indent": ["error", 2],
     "no-multi-spaces": ["error"],
     "react/jsx-props-no-spreading": "off",
     "no-use-before-define": "off",

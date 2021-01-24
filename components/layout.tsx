@@ -9,7 +9,7 @@ type Props = {
 const Layout = ({ children }: Props) => (
   <>
     <Meta />
-    <main >{children}</main>
+    <main>{children}</main>
     <Footer />
   </>
 )

@@ -68,10 +68,9 @@ exports[`PostHeader should render PostHeader 1`] = `
       >
         January	1, 2019
       </time>
-       -
-       
+       - 
       <svg
-        className="chakra-icon css-zmpx8u"
+        className="chakra-icon css-1kmqiqp"
         focusable={false}
         viewBox="0 0 24 24"
       >

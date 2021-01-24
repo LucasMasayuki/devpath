@@ -74,13 +74,10 @@ exports[`PostPreview should render PostPreview 1`] = `
         </h3>
       </div>
       <div
-        className="css-17xejub"
-      />
-      <div
-        className="css-0"
+        className="css-1fhgjcy"
       >
         <div
-          className="chakra-stack css-180nsro"
+          className="chakra-stack css-1ukngxm"
         >
           <span
             className="chakra-avatar css-1ruhx4w"
@@ -100,20 +97,16 @@ exports[`PostPreview should render PostPreview 1`] = `
         </div>
       </div>
       <div
-        className="css-17xejub"
-      />
-      <div
-        className="css-0"
+        className="css-eg4v4b"
       >
         <time
           dateTime="1996-10-02"
         >
           October	2, 1996
         </time>
-         -
-         
+         - 
         <svg
-          className="chakra-icon css-zmpx8u"
+          className="chakra-icon css-1kmqiqp"
           focusable={false}
           viewBox="0 0 24 24"
         >
@@ -135,10 +128,7 @@ exports[`PostPreview should render PostPreview 1`] = `
         </small>
       </div>
       <div
-        className="css-17xejub"
-      />
-      <div
-        className="css-0"
+        className="css-1fhgjcy"
       >
         <p
           className="chakra-text css-1aayjs6"

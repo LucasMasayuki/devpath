@@ -9,7 +9,7 @@ type Props = {
   slug?: string
 }
 
-const CoverImage = ({ title, src, slug }: Props) => (
+const CoverImage = ({ title, src, slug }: Props) =>
   slug ? (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
       <Image layout="fill" src={src} alt={`Cover Image for ${title}`} />
@@ -17,6 +17,5 @@ const CoverImage = ({ title, src, slug }: Props) => (
   ) : (
     <Image layout="fill" src={src} alt={`Cover Image for ${title}`} />
   )
-)
 
 export default CoverImage

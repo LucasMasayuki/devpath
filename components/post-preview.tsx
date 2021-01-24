@@ -1,15 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import {
-  Avatar,
-  Box,
-  Link as ChakraLink,
-  Text,
-  HStack,
-  Spacer,
-  Flex,
-  Heading,
-} from '@chakra-ui/react'
+import { Avatar, Box, Link as ChakraLink, Text, HStack, Flex, Heading } from '@chakra-ui/react'
 
 import DateFormatter from '@/components/date-formatter'
 import CoverImage from '@/components/cover-image'
@@ -25,15 +16,7 @@ type Props = {
   slug: string
 }
 
-const PostPreview = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) => {
-  
+const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
   // const { data } = useFetch(`/api/page-views-preview?id=${slug}`, true)
 
   // const views = data?.total
@@ -55,12 +38,7 @@ const PostPreview = ({
       <Box p="6">
         <Flex direction="column">
           <Box>
-            <Heading
-              mt="1"
-              fontWeight="semibold"
-              as="h3"
-              lineHeight="tight"
-            >
+            <Heading mt="1" fontWeight="semibold" as="h3" lineHeight="tight">
               <Link as={`/posts/${slug}`} href="/posts/[slug]">
                 <ChakraLink>{title}</ChakraLink>
               </Link>
@@ -75,11 +53,12 @@ const PostPreview = ({
             </HStack>
           </Box>
           <Box mt="1">
-            <DateFormatter dateString={date} /> -{' '}
-            <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
+            <DateFormatter dateString={date} /> - <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
           </Box>
           <Box mt="4">
-            <Text noOfLines={3} isTruncated>{excerpt}</Text>
+            <Text noOfLines={3} isTruncated>
+              {excerpt}
+            </Text>
           </Box>
         </Flex>
       </Box>

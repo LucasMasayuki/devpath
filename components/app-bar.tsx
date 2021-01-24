@@ -8,7 +8,9 @@ const AppBar = () => (
     <Flex>
       <Box p="2">
         <Link as="/" href="/">
-          <Heading size="md" fontWeight="bold">DEVPATH</Heading>
+          <Heading size="md" fontWeight="bold">
+            DEVPATH
+          </Heading>
         </Link>
       </Box>
       <Spacer />

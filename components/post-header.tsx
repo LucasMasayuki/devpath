@@ -7,12 +7,12 @@ import Author from '@/types/author'
 import PostViews from '@/components/post-views'
 
 type Props = {
-  title: string;
-  coverImage: string;
-  date: string;
-  author: Author;
-  views: number;
-};
+  title: string
+  coverImage: string
+  date: string
+  author: Author
+  views: number
+}
 
 const PostHeader = ({ title, coverImage, date, author, views }: Props) => (
   <>
@@ -23,8 +23,7 @@ const PostHeader = ({ title, coverImage, date, author, views }: Props) => (
       </Box>
       <Box>
         <Box mb={4}>
-          <DateFormatter dateString={date} /> -{' '}
-          <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
+          <DateFormatter dateString={date} /> - <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
         </Box>
         <Box>
           <Avatar size="sm" name={author.name} src={author.picture} />

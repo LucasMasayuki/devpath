@@ -7,12 +7,7 @@ type Props = {
 }
 
 const PostTitle = ({ children }: Props) => (
-  <Heading
-    mt="1"
-    fontWeight="bold"
-    as="h1"
-    lineHeight="tight"
-  >
+  <Heading mt="1" fontWeight="bold" as="h1" lineHeight="tight">
     {children}
   </Heading>
 )

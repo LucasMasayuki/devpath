@@ -1,19 +1,29 @@
 import React from 'react'
-import { Box, Flex, Spacer, Text } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Icon, IconButton, Link, Spacer, Text } from '@chakra-ui/react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => (
   <footer>
-    <Box 
-      bgGradient="linear(to-r, #EB3349, #F45C43)"
-      h={50} 
-      color="white"
-      p={4}
-    >
+    <Box bgGradient="linear(to-r, #EB3349, #F45C43)" color="white" p={4}>
       <Flex direction="row">
-        <Text>DevPath</Text>
+        <Text>DEVPATH</Text>
         <Spacer />
         <Text>Created by Lucas Masayuki</Text>
       </Flex>
+
+      <Grid templateColumns="repeat(5, 1fr)" gap={4}>
+        <GridItem colStart={5} colEnd={6}>
+          <Flex direction="row">
+            <Link href="https://github.com/LucasMasayuki" isExternal>
+              <IconButton variant="none" aria-label="My personal github" icon={<Icon as={FaGithub} />} size="lg" />
+            </Link>
+            <Spacer />
+            <Link href="https://br.linkedin.com/in/lucas-tamaribuchi" isExternal>
+              <IconButton variant="none" aria-label="My Linkedin" icon={<Icon as={FaLinkedin} />} size="lg" />
+            </Link>
+          </Flex>
+        </GridItem>
+      </Grid>
     </Box>
   </footer>
 )
