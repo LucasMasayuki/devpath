@@ -6,7 +6,7 @@ type Props = {
   children?: ReactNode
 }
 
-const PostTitle = ({ children }: Props) => (
+const PostTitle = ({ children }: Props): JSX.Element => (
   <Heading mt="1" fontWeight="bold" as="h1" lineHeight="tight">
     {children}
   </Heading>

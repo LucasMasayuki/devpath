@@ -1,6 +1,6 @@
 import React from 'react'
-import renderer from 'react-test-renderer';
-import PostPreview from '@/components/post-preview';
+import renderer from 'react-test-renderer'
+import PostPreview from '@/components/post-preview'
 import Author from '@/types/author'
 import Post from '@/types/post'
 
@@ -17,10 +17,10 @@ describe('PostPreview', () => {
       title: 'test',
       coverImage: 'test.com',
       date: '1996-10-02',
-      author: author,
+      author,
       excerpt: 'test',
       ogImage: {
-        url: 'test'
+        url: 'test',
       },
     }
 
@@ -32,10 +32,10 @@ describe('PostPreview', () => {
         excerpt={post.excerpt}
         author={post.author}
         slug={post.slug}
-      />
+      />,
     )
 
-    let tree = component.toJSON()
+    const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

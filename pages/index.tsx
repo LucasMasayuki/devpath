@@ -11,19 +11,21 @@ type Props = {
   allPosts: Post[]
 }
 
-const Index = ({ allPosts }: Props) => {
+type Items = {
+  [key: string]: string
+}
+
+const Index = ({ allPosts }: Props): JSX.Element => {
   const posts = allPosts
 
   return (
     <>
       <Layout>
         <Head>
-          <title>
-              Devpath Blog
-          </title>
+          <title>Devpath Blog</title>
         </Head>
         <AppBar />
-  
+
         {posts.length > 0 && <PostList posts={posts} />}
       </Layout>
     </>
@@ -32,15 +34,14 @@ const Index = ({ allPosts }: Props) => {
 
 export default Index
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
+type StaticProps = {
+  props: {
+    allPosts: Items[]
+  }
+}
+
+export const getStaticProps = (): StaticProps => {
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt'])
 
   return {
     props: { allPosts },

@@ -1,6 +1,11 @@
 import useSWR from 'swr'
 
-const useFetch = (url: string, revalidateOnFocus: boolean = false) => {
+type Response = {
+  data: any
+  error: any
+}
+
+const useFetch = (url: string, revalidateOnFocus = false): Response => {
   const { data, error } = useSWR(
     url,
     async (requestUrl: string) => {
@@ -9,7 +14,7 @@ const useFetch = (url: string, revalidateOnFocus: boolean = false) => {
 
       return json
     },
-    { revalidateOnFocus }
+    { revalidateOnFocus },
   )
 
   return { data, error }

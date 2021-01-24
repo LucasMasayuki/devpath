@@ -1,8 +1,8 @@
 import React from 'react'
-import renderer from 'react-test-renderer';
+import renderer from 'react-test-renderer'
 import Index from '@/pages/index'
-import {getStaticProps} from '@/pages/index'
-import Author from '@/types/author';
+import { getStaticProps } from '@/pages/index'
+import Author from '@/types/author'
 import Post from '@/types/post'
 
 describe('Index', () => {
@@ -18,21 +18,17 @@ describe('Index', () => {
       title: 'test',
       coverImage: 'test.com',
       date: '1996-10-02',
-      author: author,
+      author,
       excerpt: 'test',
       ogImage: {
-        url: 'test'
+        url: 'test',
       },
     }
 
-    const posts: Post[] = [
-      post,
-    ];
+    const posts: Post[] = [post]
 
-    const component = renderer.create(
-      <Index allPosts={posts}/>,
-    )
-    let tree = component.toJSON()
+    const component = renderer.create(<Index allPosts={posts} />)
+    const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
 

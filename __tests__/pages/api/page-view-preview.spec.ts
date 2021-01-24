@@ -12,11 +12,15 @@ describe('Page view preview (/api/page-views-preview?id=$preview)', () => {
     const mockDb = new MockDb()
     mockClient.isConnected.mockImplementation(() => true)
     mockDb.collection.mockImplementation(() => mockDb)
-    mockDb.findOne.mockImplementation(() => {  return { total: 1 } })
+    mockDb.findOne.mockImplementation(() => {
+      return { total: 1 }
+    })
 
-    connectToDatabase.mockImplementation(() => { return { db: mockDb, client: mockClient } })
+    connectToDatabase.mockImplementation(() => {
+      return { db: mockDb, client: mockClient }
+    })
 
-    const req  = createRequest({
+    const req = createRequest({
       method: 'GET',
       url: '/api/page-views-preview?id=42',
     })
@@ -36,9 +40,11 @@ describe('Page view preview (/api/page-views-preview?id=$preview)', () => {
     mockDb.collection.mockImplementation(() => mockDb)
     mockDb.findOne.mockImplementation(() => null)
 
-    connectToDatabase.mockImplementation(() => { return { db: mockDb, client: mockClient } })
+    connectToDatabase.mockImplementation(() => {
+      return { db: mockDb, client: mockClient }
+    })
 
-    const req  = createRequest({
+    const req = createRequest({
       method: 'GET',
       url: '/api/page-views-preview?id=42',
     })
@@ -56,10 +62,14 @@ describe('Page view preview (/api/page-views-preview?id=$preview)', () => {
     const mockDb = new MockDb()
     mockClient.isConnected.mockImplementation(() => false)
     mockDb.collection.mockImplementation(() => mockDb)
-    mockDb.findOne.mockImplementation(() => {  return { total: 1 } })
-    connectToDatabase.mockImplementation(() => { return { db: mockDb, client: mockClient } })
+    mockDb.findOne.mockImplementation(() => {
+      return { total: 1 }
+    })
+    connectToDatabase.mockImplementation(() => {
+      return { db: mockDb, client: mockClient }
+    })
 
-    const req  = createRequest({
+    const req = createRequest({
       method: 'GET',
       url: '/api/page-views-preview?id=42',
     })
@@ -76,10 +86,14 @@ describe('Page view preview (/api/page-views-preview?id=$preview)', () => {
     const mockDb = new MockDb()
     mockClient.isConnected.mockImplementation(() => false)
     mockDb.collection.mockImplementation(() => mockDb)
-    mockDb.findOne.mockImplementation(() => {  return { total: 1 } })
-    connectToDatabase.mockImplementation(() => { return { db: mockDb, client: mockClient } })
+    mockDb.findOne.mockImplementation(() => {
+      return { total: 1 }
+    })
+    connectToDatabase.mockImplementation(() => {
+      return { db: mockDb, client: mockClient }
+    })
 
-    const req  = createRequest({
+    const req = createRequest({
       method: 'GET',
       url: '/api/page-views-preview',
     })

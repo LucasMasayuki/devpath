@@ -1,3 +1,3 @@
 export default class MockClient {
-  public isConnected =  jest.fn()
+  public isConnected = jest.fn()
 }

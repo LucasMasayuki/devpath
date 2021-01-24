@@ -7,7 +7,7 @@ type Props = {
   posts: Post[]
 }
 
-const PostList = ({ posts }: Props) => (
+const PostList = ({ posts }: Props): JSX.Element => (
   <Flex direction="column">
     {posts.map((post) => (
       <PostPreview

@@ -1,33 +1,27 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import connectToDatabase from '../../config/mongodb'
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
-  
-  const slug = req.query.id 
-  
-  if(!slug) return res.json('Página não encontrada!')
+export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
+  const slug = req.query.id
+
+  if (!slug) return res.json('Página não encontrada!')
 
   const { db, client } = await connectToDatabase()
 
-  if(client.isConnected()) {
-    const pageViewBySlug = await db
-      .collection('pageviews')
-      .findOne({ slug })
+  if (client.isConnected()) {
+    const pageViewBySlug = await db.collection('pageviews').findOne({ slug })
 
-      console.log(pageViewBySlug)
-      let total = 0
-    if(pageViewBySlug !== undefined && pageViewBySlug !== null) {
+    let total = 0
+    if (pageViewBySlug !== undefined && pageViewBySlug !== null) {
       total = pageViewBySlug.total + 1
-      await db.collection('pageviews').updateOne({ slug }, { $set: { total }})
+      await db.collection('pageviews').updateOne({ slug }, { $set: { total } })
     } else {
       total = 1
       await db.collection('pageviews').insertOne({ slug, total })
     }
-    
+
     return res.status(200).json({ total })
-    
   }
 
   return res.status(500).json({ error: 'client DB is not connected' })
-
 }

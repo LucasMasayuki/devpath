@@ -14,7 +14,7 @@ type Props = {
   views: number
 }
 
-const PostHeader = ({ title, coverImage, date, author, views }: Props) => (
+const PostHeader = ({ title, coverImage, date, author, views }: Props): JSX.Element => (
   <>
     <Box pl={6} pr={6}>
       <PostTitle>{title}</PostTitle>

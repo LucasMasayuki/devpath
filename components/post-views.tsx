@@ -6,7 +6,7 @@ type Props = {
   children?: ReactNode
 }
 
-const PostViews = ({ children }: Props) => (
+const PostViews = ({ children }: Props): JSX.Element => (
   <>
     <ViewIcon color="white" mr="2" />
     <small>{children}</small>

@@ -3,7 +3,7 @@ import React from 'react'
 import ThemeContainer from '@/contexts/theme/ThemeContainer'
 import '@/styles/css/markdown-styles.css'
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ThemeContainer>
       <Component {...pageProps} />

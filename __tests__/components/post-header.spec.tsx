@@ -1,6 +1,6 @@
 import React from 'react'
-import renderer from 'react-test-renderer';
-import PostHeader from '@/components/post-header';
+import renderer from 'react-test-renderer'
+import PostHeader from '@/components/post-header'
 import Author from '@/types/author'
 
 describe('PostHeader', () => {
@@ -9,12 +9,12 @@ describe('PostHeader', () => {
       name: 'test',
       picture: 'test',
     }
-  
+
     const component = renderer.create(
-      <PostHeader title="test" coverImage="test" date="2019-01-01" author={author} views={1} />
+      <PostHeader title="test" coverImage="test" date="2019-01-01" author={author} views={1} />,
     )
 
-    let tree = component.toJSON()
+    const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

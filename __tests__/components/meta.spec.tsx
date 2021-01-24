@@ -1,14 +1,12 @@
 import React from 'react'
-import renderer from 'react-test-renderer';
-import Meta from '@/components/meta';
+import renderer from 'react-test-renderer'
+import Meta from '@/components/meta'
 
 describe('Footer', () => {
   it('should render Footer', () => {
-    const component = renderer.create(
-      <Meta />
-    )
+    const component = renderer.create(<Meta />)
 
-    let tree = component.toJSON()
+    const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

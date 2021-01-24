@@ -11,7 +11,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 
-const DrawerButton = () => {
+const DrawerButton = (): JSX.Element => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (

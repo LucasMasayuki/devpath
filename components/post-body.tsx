@@ -5,7 +5,7 @@ type Props = {
   content: string
 }
 
-const PostBody = ({ content }: Props) => (
+const PostBody = ({ content }: Props): JSX.Element => (
   <Box>
     <Box class="markdown" dangerouslySetInnerHTML={{ __html: content }} />
   </Box>

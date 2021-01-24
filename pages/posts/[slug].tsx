@@ -16,8 +16,31 @@ import PostType from '@/types/post'
 import PostHeader from '@/components/post-header'
 
 type Props = {
-  post: PostType;
-};
+  post: PostType
+}
+
+type Params = {
+  params: {
+    slug: string
+  }
+}
+
+type StaticPaths = {
+  paths: {
+    params: {
+      slug: string
+    }
+  }[]
+  fallback: boolean
+}
+
+type StaticProps = {
+  props: {
+    post: {
+      content: string
+    }
+  }
+}
 
 // eslint-disable-next-line no-unused-vars
 const Post = ({ post }: Props) => {
@@ -38,9 +61,7 @@ const Post = ({ post }: Props) => {
           <>
             <Box mt={4} mb={20}>
               <Head>
-                <title>
-                  {post.title}
-                </title>
+                <title>{post.title}</title>
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
               <PostHeader
@@ -61,22 +82,8 @@ const Post = ({ post }: Props) => {
 
 export default Post
 
-type Params = {
-  params: {
-    slug: string;
-  };
-};
-
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'coverImage',
-  ])
+export async function getStaticProps({ params }: Params): Promise<StaticProps> {
+  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'author', 'content', 'ogImage', 'coverImage'])
 
   const content = await markdownToHtml(post.content || '')
 
@@ -90,7 +97,7 @@ export async function getStaticProps({ params }: Params) {
   }
 }
 
-export async function getStaticPaths() {
+export function getStaticPaths(): StaticPaths {
   const posts = getAllPosts(['slug'])
 
   return {

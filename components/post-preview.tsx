@@ -16,7 +16,7 @@ type Props = {
   slug: string
 }
 
-const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
+const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props): JSX.Element => {
   // const { data } = useFetch(`/api/page-views-preview?id=${slug}`, true)
 
   // const views = data?.total

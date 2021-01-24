@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Flex, Grid, GridItem, Icon, IconButton, Link, Spacer, Text } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-const Footer = () => (
+const Footer = (): JSX.Element => (
   <footer>
     <Box bgGradient="linear(to-r, #EB3349, #F45C43)" color="white" p={4}>
       <Flex direction="row">

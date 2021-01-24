@@ -1,28 +1,27 @@
 import React from 'react'
 
-import renderer from 'react-test-renderer';
+import renderer from 'react-test-renderer'
 import PostPage from '@/pages/posts/[slug]'
 import { getStaticProps, getStaticPaths } from '@/pages/posts/[slug]'
-import Author from '@/types/author';
+import Author from '@/types/author'
 import Post from '@/types/post'
 
-jest.mock('@/lib/fetcher');
-jest.mock('@/lib/markdownToHtml');
+jest.mock('@/lib/fetcher')
+jest.mock('@/lib/markdownToHtml')
 
-jest.mock("next/router", () => ({
+jest.mock('next/router', () => ({
   useRouter() {
-      return {
-          route: "/",
-          pathname: "",
-          query: "",
-          asPath: "",
-      };
+    return {
+      route: '/',
+      pathname: '',
+      query: '',
+      asPath: '',
+    }
   },
-}));
+}))
 
 describe('Post', () => {
   it('should render Post page', () => {
-    
     const author: Author = {
       name: 'test',
       picture: 'test',
@@ -34,29 +33,27 @@ describe('Post', () => {
       title: 'test',
       coverImage: 'test.com',
       date: '1996-10-02',
-      author: author,
+      author,
       excerpt: 'test',
       ogImage: {
-        url: 'test'
+        url: 'test',
       },
     }
 
-    const component = renderer.create(
-      <PostPage post={post}/>,
-    )
-  
-    let tree = component.toJSON()
+    const component = renderer.create(<PostPage post={post} />)
+
+    const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('should get static props', async () => {
     const staticProps = await getStaticProps({
       params: {
-        slug: 'preview'
-      }
+        slug: 'preview',
+      },
     })
-  
-    const post = staticProps.props.post
+
+    const { post } = staticProps.props
     expect(post.content).toBeUndefined()
   })
 

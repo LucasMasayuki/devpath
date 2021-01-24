@@ -1,7 +1,7 @@
 import React from 'react'
 
 // 1. import `ChakraProvider` component and `extendTheme`
-import { extendTheme, ChakraProvider, CSSReset, } from '@chakra-ui/react'
+import { extendTheme, ChakraProvider, CSSReset } from '@chakra-ui/react'
 
 import theme from '../../styles/theme'
 
