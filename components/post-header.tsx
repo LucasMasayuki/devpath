@@ -16,17 +16,20 @@ type Props = {
 
 const PostHeader = ({ title, coverImage, date, author, views }: Props): JSX.Element => (
   <>
-    <Box pl={6} pr={6}>
+    <Box pl="10%" pr="10%">
       <PostTitle>{title}</PostTitle>
-      <Box h={400} w="100%" position="relative">
+      <Box mt={4} h={250} w="100%" position="relative">
         <CoverImage title={title} src={coverImage} />
       </Box>
       <Box>
-        <Box mb={4}>
-          <DateFormatter dateString={date} /> - <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
+        <Box d="flex" mb={4} mt={4} alignItems="center">
+          <Avatar size="sm" name={author.name} src={author.picture} />
+          <Box as="span" fontSize="sm" ml={3}>
+            {author.name}
+          </Box>
         </Box>
         <Box>
-          <Avatar size="sm" name={author.name} src={author.picture} />
+          <DateFormatter dateString={date} /> - <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
         </Box>
       </Box>
     </Box>

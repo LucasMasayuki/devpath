@@ -30,8 +30,8 @@
   ],
   "settings": {
     "import/resolver": {
+      "typescript": {},
       "node": {
-        "typescript": {},
         "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
       }
     }

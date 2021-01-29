@@ -23,16 +23,8 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props):
   const views = 0
 
   return (
-    <Box
-      borderWidth="1px"
-      borderRadius="lg"
-      overflow="hidden"
-      bgGradient="linear(to-r, #EB3349, #F45C43)"
-      shadow="1px 1px #b7b7b7"
-      color="white"
-      m={4}
-    >
-      <Box h={200} w="100%" position="relative">
+    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" shadow="1px 1px #b7b7b7" color="white" m={4}>
+      <Box h={180} w="100%" position="relative">
         <CoverImage title={title} src={coverImage} slug={slug} />
       </Box>
       <Box p="6">
@@ -44,13 +36,11 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props):
               </Link>
             </Heading>
           </Box>
-          <Box mt="4">
-            <HStack spacing="8px">
-              <Avatar size="sm" name={author.name} src={author.picture} />
-              <Box as="span" fontSize="sm">
-                {author.name}
-              </Box>
-            </HStack>
+          <Box d="flex" mb={4} mt={2} alignItems="center">
+            <Avatar size="sm" name={author.name} src={author.picture} />
+            <Box as="span" fontSize="sm" ml={3}>
+              {author.name}
+            </Box>
           </Box>
           <Box mt="1">
             <DateFormatter dateString={date} /> - <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>

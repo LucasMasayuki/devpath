@@ -2,7 +2,7 @@
 
 exports[`PostHeader should render PostHeader 1`] = `
 <div
-  className="css-1fpx25h"
+  className="css-75lqi9"
 >
   <h1
     className="chakra-heading css-1dwxp6k"
@@ -10,7 +10,7 @@ exports[`PostHeader should render PostHeader 1`] = `
     test
   </h1>
   <div
-    className="css-19dv3nn"
+    className="css-os2ptq"
   >
     <div
       style={
@@ -61,7 +61,26 @@ exports[`PostHeader should render PostHeader 1`] = `
     className="css-0"
   >
     <div
-      className="css-1itv5e3"
+      className="css-f8bcv8"
+    >
+      <span
+        className="chakra-avatar css-1ruhx4w"
+      >
+        <div
+          aria-label="test"
+          className="chakra-avatar__initials css-0"
+        >
+          t
+        </div>
+      </span>
+      <span
+        className="css-xf6agq"
+      >
+        test
+      </span>
+    </div>
+    <div
+      className="css-0"
     >
       <time
         dateTime="2019-01-01"
@@ -90,20 +109,6 @@ exports[`PostHeader should render PostHeader 1`] = `
       <small>
         1 views
       </small>
-    </div>
-    <div
-      className="css-0"
-    >
-      <span
-        className="chakra-avatar css-1ruhx4w"
-      >
-        <div
-          aria-label="test"
-          className="chakra-avatar__initials css-0"
-        >
-          t
-        </div>
-      </span>
     </div>
   </div>
 </div>

@@ -8,7 +8,7 @@
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  margin: 1.5rem;
+  margin: 1.5rem 10% 1.5rem 10%;
 }
 
 .markdown h2 {

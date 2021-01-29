@@ -12,10 +12,14 @@ exports[`AppBar should render AppBar 1`] = `
     >
       <h2
         className="chakra-heading css-in3yi3"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
       >
-        DEVPATH
+        <a
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          DEVPATH
+        </a>
       </h2>
     </div>
     <div

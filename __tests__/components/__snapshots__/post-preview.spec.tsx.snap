@@ -2,10 +2,10 @@
 
 exports[`PostPreview should render PostPreview 1`] = `
 <div
-  className="css-15jqh4k"
+  className="css-dv71fa"
 >
   <div
-    className="css-1fo89uv"
+    className="css-qy636i"
   >
     <div
       style={
@@ -74,27 +74,23 @@ exports[`PostPreview should render PostPreview 1`] = `
         </h3>
       </div>
       <div
-        className="css-1fhgjcy"
+        className="css-1yh2cij"
       >
-        <div
-          className="chakra-stack css-1ukngxm"
+        <span
+          className="chakra-avatar css-1ruhx4w"
         >
-          <span
-            className="chakra-avatar css-1ruhx4w"
+          <div
+            aria-label="test"
+            className="chakra-avatar__initials css-0"
           >
-            <div
-              aria-label="test"
-              className="chakra-avatar__initials css-0"
-            >
-              t
-            </div>
-          </span>
-          <span
-            className="css-g5hezf"
-          >
-            test
-          </span>
-        </div>
+            t
+          </div>
+        </span>
+        <span
+          className="css-xf6agq"
+        >
+          test
+        </span>
       </div>
       <div
         className="css-eg4v4b"

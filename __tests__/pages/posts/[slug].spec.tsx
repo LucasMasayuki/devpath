@@ -1,8 +1,8 @@
 import React from 'react'
 
 import renderer from 'react-test-renderer'
-import PostPage from '@/pages/posts/[slug]'
-import { getStaticProps, getStaticPaths } from '@/pages/posts/[slug]'
+import PostPage, { getStaticProps, getStaticPaths } from '@/pages/posts/[slug]'
+
 import Author from '@/types/author'
 import Post from '@/types/post'
 
@@ -49,7 +49,7 @@ describe('Post', () => {
   it('should get static props', async () => {
     const staticProps = await getStaticProps({
       params: {
-        slug: 'preview',
+        slug: 'the-road-so-far',
       },
     })
 

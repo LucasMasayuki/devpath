@@ -10,30 +10,27 @@ Array [
       className="css-14i12oi"
     >
       <div
-        className="css-1xhj18k"
+        className="css-150970n"
       >
-        <p
-          className="chakra-text css-0"
+        <h2
+          className="chakra-heading css-in3yi3"
         >
           DEVPATH
-        </p>
+        </h2>
         <div
-          className="css-17xejub"
-        />
-        <p
-          className="chakra-text css-0"
-        >
-          Created by Lucas Masayuki
-        </p>
-      </div>
-      <div
-        className="css-1yi8on9"
-      >
-        <div
-          className="css-1bn4m0d"
+          className="css-1l2zrv3"
         >
           <div
-            className="css-1xhj18k"
+            className="css-1m1l6q9"
+          >
+            <p
+              className="chakra-text css-0"
+            >
+              Created by Lucas Masayuki
+            </p>
+          </div>
+          <div
+            className="css-4xeohy"
           >
             <a
               className="chakra-link css-0"
@@ -69,9 +66,6 @@ Array [
                 </svg>
               </button>
             </a>
-            <div
-              className="css-17xejub"
-            />
             <a
               className="chakra-link css-0"
               href="https://br.linkedin.com/in/lucas-tamaribuchi"
