@@ -4,7 +4,7 @@ exports[`Index should render Index 1`] = `
 Array [
   <main>
     <div
-      className="css-173ple2"
+      className="css-1wnhz3b"
     >
       <div
         className="css-k008qs"
@@ -213,7 +213,7 @@ Array [
             className="css-1m1l6q9"
           >
             <p
-              className="chakra-text css-0"
+              className="chakra-text css-1lj023j"
             >
               Created by Lucas Masayuki
             </p>

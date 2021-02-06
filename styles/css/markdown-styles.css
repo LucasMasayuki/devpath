@@ -11,6 +11,10 @@
   margin: 1.5rem 10% 1.5rem 10%;
 }
 
+.markdown p {
+  text-align: justify;
+}
+
 .markdown h2 {
   font-size: 1.875rem;
   margin-top: 3rem;

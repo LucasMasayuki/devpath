@@ -12,14 +12,14 @@ const Footer = (): JSX.Element => (
         </Heading>
         <Grid templateColumns="repeat(5, 1fr)">
           <GridItem colStart={6} colEnd={6}>
-            <Text>Created by Lucas Masayuki</Text>
+            <Text fontSize="xs">Created by Lucas Masayuki</Text>
           </GridItem>
           <GridItem colStart={6} colEnd={6} textAlign="right">
             <Link href="https://github.com/LucasMasayuki" isExternal>
-              <IconButton variant="none" aria-label="My personal github" icon={<Icon as={FaGithub} />} size="lg" />
+              <IconButton variant="none" aria-label="My personal github" icon={<Icon as={FaGithub} />} size="md" />
             </Link>
             <Link href="https://br.linkedin.com/in/lucas-tamaribuchi" isExternal>
-              <IconButton variant="none" aria-label="My Linkedin" icon={<Icon as={FaLinkedin} />} size="lg" />
+              <IconButton variant="none" aria-label="My Linkedin" icon={<Icon as={FaLinkedin} />} size="md" />
             </Link>
           </GridItem>
         </Grid>

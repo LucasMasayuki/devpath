@@ -49,7 +49,7 @@ const Post = ({ post }: Props) => {
     return <ErrorPage statusCode={404} />
   }
 
-  const { data } = useFetch(`/api/page-views?id=${post.slug}`)
+  // const { data } = useFetch(`/api/page-views?id=${post.slug}`)
 
   return (
     <Layout>
@@ -69,7 +69,8 @@ const Post = ({ post }: Props) => {
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
-                views={data?.total}
+                // views={data?.total}
+                views={1}
               />
               <PostBody content={post.content} />
             </Box>

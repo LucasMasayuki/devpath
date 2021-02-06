@@ -1,13 +1,13 @@
 ---
 title: 'The road so far'
 excerpt: 'The road of a developer can be a short or long journey, from intern to senior, from developer to CEO of a startup, the paths are multiple and start to track them can be from a confusing and distressing beginning.'
-coverImage: '/by_the_road.png'
+coverImage: '/cover-images/by-the-road.png'
 date: '2021-01-26T05:35:07.322Z'
 author:
   name: Lucas Masayuki Tamaribuchi
-  picture: '/assets/blog/authors/lucasmasayuki.jpeg'
+  picture: '/author/lucas-tamaribuchi.jpg'
 ogImage:
-  url: '/public/by_the_road.png'
+  url: '/cover-images/by-the-road.png'
 ---
 
 The road of a developer can be a short or long journey, from intern to senior, from developer to CEO of a startup, the paths are multiple and start to track them can be from a confusing and distressing beginning.

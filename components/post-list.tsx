@@ -1,15 +1,15 @@
 import React from 'react'
-import { Grid, GridItem, useMediaQuery } from '@chakra-ui/react'
+import { Grid, GridItem } from '@chakra-ui/react'
 import PostPreview from '@/components/post-preview'
 import Post from '@/types/post'
+import isDesktop from '@/lib/responsiveHelper'
 
 type Props = {
   posts: Post[]
 }
 
 function templateColumns(): string {
-  const [isLargerThan992] = useMediaQuery('(min-width: 992px)')
-  return isLargerThan992 ? 'repeat(2, 1fr)' : 'repeat(1, 1fr)'
+  return isDesktop() ? 'repeat(2, 1fr)' : 'repeat(1, 1fr)'
 }
 
 const PostList = ({ posts }: Props): JSX.Element => {

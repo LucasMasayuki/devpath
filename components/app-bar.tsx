@@ -5,7 +5,7 @@ import DrawerButton from '@/components/drawer-button'
 import { BG_GRADIENT_COLOR } from '@/lib/constants'
 
 const AppBar = (): JSX.Element => (
-  <Box bgGradient={BG_GRADIENT_COLOR} w="100%" color="white" p={4}>
+  <Box bgGradient={BG_GRADIENT_COLOR} w="100%" color="white" p={4} boxShadow="0px 0px 8px 2px #000000">
     <Flex>
       <Box p="2">
         <Heading size="md" fontWeight="bold">
