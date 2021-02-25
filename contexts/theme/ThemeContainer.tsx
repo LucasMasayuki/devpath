@@ -5,8 +5,13 @@ import { extendTheme, ChakraProvider, CSSReset } from '@chakra-ui/react'
 
 import theme from '../../styles/theme'
 
+type ThemeConfig = {
+  useSystemColorMode: boolean
+  initialColorMode: string
+}
+
 // 2. declare your configuration, these are the defaults
-const config = {
+const config: ThemeConfig = {
   useSystemColorMode: false,
   initialColorMode: 'dark',
 }
