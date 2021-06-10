@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { Avatar, Box, Link as ChakraLink, Text, HStack, Flex, Heading } from '@chakra-ui/react'
+import { Avatar, Box, Link as ChakraLink, Text, Flex, Heading } from '@chakra-ui/react'
 
 import DateFormatter from '@/components/date-formatter'
 import CoverImage from '@/components/cover-image'

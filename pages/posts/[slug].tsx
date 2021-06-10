@@ -14,6 +14,7 @@ import PostTitle from '@/components/post-title'
 import markdownToHtml from '@/lib/markdownToHtml'
 import PostType from '@/types/post'
 import PostHeader from '@/components/post-header'
+import { jsx } from '@emotion/react'
 
 type Props = {
   post: PostType
@@ -43,7 +44,7 @@ type StaticProps = {
 }
 
 // eslint-disable-next-line no-unused-vars
-const Post = ({ post }: Props) => {
+const Post = ({ post }: Props): JSX.Element => {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -59,7 +60,7 @@ const Post = ({ post }: Props) => {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <Box mt={4} mb={20}>
+            <Box mb={20}>
               <Head>
                 <title>{post.title}</title>
                 <meta property="og:image" content={post.ogImage.url} />

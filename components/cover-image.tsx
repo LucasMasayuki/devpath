@@ -9,7 +9,7 @@ type Props = {
   slug?: string
 }
 
-const CoverImage = ({ title, src, slug }: Props) =>
+const CoverImage = ({ title, src, slug }: Props): JSX.Element =>
   slug ? (
     <Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
       <Image layout="fill" src={src} alt={`Cover Image for ${title}`} />

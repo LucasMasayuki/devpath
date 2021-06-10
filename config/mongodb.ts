@@ -1,10 +1,10 @@
-import { MongoClient } from 'mongodb'
+import { Db, MongoClient } from 'mongodb'
 
 const uri = process.env.MONGODB_URI || ''
 const dbName = process.env.MONGODB_DB
 
-let cachedClient: any = null
-let cachedDb: any = null
+let cachedClient: MongoClient
+let cachedDb: Db
 
 function hasCorrectlyEnv(): void {
   if (!uri) {
@@ -16,7 +16,10 @@ function hasCorrectlyEnv(): void {
   }
 }
 
-const connectToDatabase = async () => {
+const connectToDatabase = async (): Promise<{
+  client: MongoClient
+  db: Db
+}> => {
   hasCorrectlyEnv()
   if (cachedClient && cachedDb) {
     return { client: cachedClient, db: cachedDb }
@@ -27,7 +30,7 @@ const connectToDatabase = async () => {
     useUnifiedTopology: true,
   })
 
-  const db = await client.db(dbName)
+  const db = client.db(dbName)
 
   cachedClient = client
   cachedDb = db

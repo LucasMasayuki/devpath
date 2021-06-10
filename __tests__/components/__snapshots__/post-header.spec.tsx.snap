@@ -2,18 +2,13 @@
 
 exports[`PostHeader should render PostHeader 1`] = `
 <div
-  className="css-75lqi9"
+  className="css-0"
 >
-  <h1
-    className="chakra-heading css-1dwxp6k"
-  >
-    test
-  </h1>
   <div
     className="css-gmuwbf"
   >
     <div
-      className="css-os2ptq"
+      className="css-1f3nm79"
     >
       <div
         style={
@@ -62,8 +57,13 @@ exports[`PostHeader should render PostHeader 1`] = `
     </div>
   </div>
   <div
-    className="css-13brihr"
+    className="css-75lqi9"
   >
+    <h1
+      className="chakra-heading css-1dwxp6k"
+    >
+      test
+    </h1>
     <div
       className="css-f8bcv8"
     >

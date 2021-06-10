@@ -6,7 +6,7 @@ import connectToDatabase from '@/config/mongodb'
 
 jest.mock('@/config/mongodb')
 
-describe('Page view (/api/page-views?id=${post.slug})', () => {
+describe('Page view (/api/page-views?id=)', () => {
   it('should update page views total, when already has a page view', async () => {
     const mockClient = new MockClient()
     const mockDb = new MockDb()
