@@ -26,7 +26,7 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props):
     <Box
       borderRadius="lg"
       overflow="hidden"
-      backgroundColor="#011627"
+      backgroundColor="secondaryDarkColor"
       boxShadow="0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"
       color="white"
       m={4}

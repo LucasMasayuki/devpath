@@ -4,7 +4,7 @@ exports[`Index should render Index 1`] = `
 Array [
   <main>
     <div
-      className="css-50v2v5"
+      className="css-8eyg68"
     >
       <div
         className="css-k008qs"
@@ -20,7 +20,7 @@ Array [
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
-              DEVPATH
+              DEVMON
             </a>
           </h2>
         </div>
@@ -52,10 +52,24 @@ Array [
       </div>
     </div>
     <div
+      className="css-113utp"
+    >
+      <h1
+        className="chakra-heading css-0"
+      >
+        DEVMON
+      </h1>
+      <code
+        className="chakra-code css-kbxewa"
+      >
+        // Developer in eternal evolution
+      </code>
+    </div>
+    <div
       className="css-1fwk6o1"
     >
       <div
-        className="css-164tvaq"
+        className="css-1saqmis"
       >
         <div
           className="css-qy636i"
@@ -155,7 +169,7 @@ Array [
   </main>,
   <footer>
     <div
-      className="css-1qgh85w"
+      className="css-1mg3lkg"
     >
       <div
         className="css-1fp0dlw"
@@ -163,7 +177,7 @@ Array [
         <h2
           className="chakra-heading css-in3yi3"
         >
-          DEVPATH
+          DEVMON
         </h2>
         <div
           className="css-1l2zrv3"

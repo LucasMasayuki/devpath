@@ -11,6 +11,14 @@
     "coverage": "jest --coverage",
     "update-snapshots": "jest --updateSnapshot"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint"
+    ]
+  },
+  "husky": {
+    "pre-commit": "lint-staged"
+  },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",
     "@chakra-ui/react": "^1.6.3",

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexHeader should render index header 1`] = `
+<div
+  className="css-113utp"
+>
+  <h1
+    className="chakra-heading css-0"
+  >
+    DEVMON
+  </h1>
+  <code
+    className="chakra-code css-kbxewa"
+  >
+    // Developer in eternal evolution
+  </code>
+</div>
+`;

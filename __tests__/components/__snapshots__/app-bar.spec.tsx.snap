@@ -2,7 +2,7 @@
 
 exports[`AppBar should render AppBar 1`] = `
 <div
-  className="css-50v2v5"
+  className="css-8eyg68"
 >
   <div
     className="css-k008qs"
@@ -18,7 +18,7 @@ exports[`AppBar should render AppBar 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
         >
-          DEVPATH
+          DEVMON
         </a>
       </h2>
     </div>

@@ -1,13 +1,14 @@
 import React from 'react'
 import { Box, Grid, GridItem, Icon, IconButton, Link, SimpleGrid, Text, Heading } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { APP_NAME } from '@/lib/constants'
 
 const Footer = (): JSX.Element => (
   <footer>
-    <Box bgColor="primaryColor" color="white" pr={4} pl={4} pb={2} pt={2}>
+    <Box bgColor="secondaryDarkColor" color="white" pr={4} pl={4} pb={2} pt={2}>
       <SimpleGrid columns={2} spacing={10} alignItems="center">
         <Heading size="sm" fontWeight="bold">
-          DEVPATH
+          {APP_NAME}
         </Heading>
         <Grid templateColumns="repeat(5, 1fr)">
           <GridItem colStart={6} colEnd={6}>

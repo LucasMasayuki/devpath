@@ -3,7 +3,7 @@
 exports[`Footer should render Footer 1`] = `
 <footer>
   <div
-    className="css-1qgh85w"
+    className="css-1mg3lkg"
   >
     <div
       className="css-1fp0dlw"
@@ -11,7 +11,7 @@ exports[`Footer should render Footer 1`] = `
       <h2
         className="chakra-heading css-in3yi3"
       >
-        DEVPATH
+        DEVMON
       </h2>
       <div
         className="css-1l2zrv3"
