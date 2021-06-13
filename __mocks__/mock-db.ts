@@ -1,4 +1,10 @@
-export default class MockDb {
+import { Db, Server } from 'mongodb'
+
+export default class MockDb extends Db {
+  constructor(databaseName = 'test', serverConfig = new Server('test', 0)) {
+    super(databaseName, serverConfig)
+  }
+
   public collection = jest.fn()
 
   public findOne = jest.fn()
@@ -6,4 +12,6 @@ export default class MockDb {
   public updateOne = jest.fn()
 
   public insertOne = jest.fn()
+
+  public aggregate = jest.fn()
 }

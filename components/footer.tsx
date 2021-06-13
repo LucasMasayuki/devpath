@@ -1,11 +1,10 @@
 import React from 'react'
 import { Box, Grid, GridItem, Icon, IconButton, Link, SimpleGrid, Text, Heading } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { BG_GRADIENT_COLOR } from '@/lib/constants'
 
 const Footer = (): JSX.Element => (
   <footer>
-    <Box bgGradient={BG_GRADIENT_COLOR} color="white" p={4}>
+    <Box bgColor="primaryColor" color="white" pr={4} pl={4} pb={2} pt={2}>
       <SimpleGrid columns={2} spacing={10} alignItems="center">
         <Heading size="sm" fontWeight="bold">
           DEVPATH

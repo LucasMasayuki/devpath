@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import { Link, Image } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import React from 'react'
 
 type Props = {
@@ -11,11 +11,13 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props): JSX.Element =>
   slug ? (
-    <Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
-      <Image layout="fill" src={src} alt={`Cover Image for ${title}`} />
-    </Link>
+    <NextLink href="/..." as={`/posts/${slug}`} passHref>
+      <Link to="/posts/[slug]">
+        <Image loading="lazy" src={src} alt={`Cover Image for ${title}`} h="100%" w="100%" />
+      </Link>
+    </NextLink>
   ) : (
-    <Image layout="fill" src={src} alt={`Cover Image for ${title}`} />
+    <Image loading="lazy" fit="fill" src={src} alt={`Cover Image for ${title}`} h="100%" w="100%" />
   )
 
 export default CoverImage

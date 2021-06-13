@@ -5,7 +5,7 @@ import React from 'react'
 
 import { Box } from '@chakra-ui/react'
 import PostBody from '@/components/post-body'
-import useFetch from '@/lib/fetcher'
+// import useFetch from '@/lib/fetcher'
 
 import AppBar from '@/components/app-bar'
 import Layout from '@/components/layout'
@@ -14,7 +14,6 @@ import PostTitle from '@/components/post-title'
 import markdownToHtml from '@/lib/markdownToHtml'
 import PostType from '@/types/post'
 import PostHeader from '@/components/post-header'
-import { jsx } from '@emotion/react'
 
 type Props = {
   post: PostType

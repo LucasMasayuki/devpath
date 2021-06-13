@@ -1,7 +1,5 @@
 import React from 'react'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { BG_GRADIENT_COLOR } from '@/lib/constants'
 import {
   IconButton,
   Drawer,
@@ -21,10 +19,10 @@ const DrawerButton = (): JSX.Element => {
       <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="xs">
         <DrawerOverlay>
           <DrawerContent>
-            <DrawerHeader borderBottomWidth="1px" bgGradient={BG_GRADIENT_COLOR} color="white">
+            <DrawerHeader borderBottomWidth="1px" bgColor="primaryColor" color="white">
               DevPath
             </DrawerHeader>
-            <DrawerBody bgGradient={BG_GRADIENT_COLOR} color="white">
+            <DrawerBody bgColor="primaryColor" color="white">
               <p>Home</p>
               <p>About author</p>
             </DrawerBody>

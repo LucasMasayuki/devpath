@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import MockDb from '@/__mocks__/mock-db'
 import MockClient from '@/__mocks__/mock-client'
 import Handler from '@/pages/api/page-views-preview'
@@ -6,9 +7,16 @@ import connectToDatabase from '@/config/mongodb'
 
 jest.mock('@/config/mongodb')
 
+const mockedConnectToDatabase = connectToDatabase as jest.MockedFunction<
+  () => Promise<{
+    client: MockClient
+    db: MockDb
+  }>
+>
+
 describe('Page view preview (/api/page-views-preview?id=$preview)', () => {
   it('should fetch page view preview data', async () => {
-    const mockClient = new MockClient()
+    const mockClient = new MockClient('test')
     const mockDb = new MockDb()
     mockClient.isConnected.mockImplementation(() => true)
     mockDb.collection.mockImplementation(() => mockDb)
@@ -16,7 +24,7 @@ describe('Page view preview (/api/page-views-preview?id=$preview)', () => {
       return { total: 1 }
     })
 
-    connectToDatabase.mockImplementation(() => {
+    mockedConnectToDatabase.mockImplementation(async () => {
       return { db: mockDb, client: mockClient }
     })
 
@@ -34,13 +42,13 @@ describe('Page view preview (/api/page-views-preview?id=$preview)', () => {
   })
 
   it('should fetch empty page view, when no have pageviews with this slug', async () => {
-    const mockClient = new MockClient()
+    const mockClient = new MockClient('test')
     const mockDb = new MockDb()
     mockClient.isConnected.mockImplementation(() => true)
     mockDb.collection.mockImplementation(() => mockDb)
     mockDb.findOne.mockImplementation(() => null)
 
-    connectToDatabase.mockImplementation(() => {
+    mockedConnectToDatabase.mockImplementation(async () => {
       return { db: mockDb, client: mockClient }
     })
 
@@ -58,14 +66,15 @@ describe('Page view preview (/api/page-views-preview?id=$preview)', () => {
   })
 
   it('should get error when database is not connected', async () => {
-    const mockClient = new MockClient()
+    const mockClient = new MockClient('test')
     const mockDb = new MockDb()
     mockClient.isConnected.mockImplementation(() => false)
     mockDb.collection.mockImplementation(() => mockDb)
     mockDb.findOne.mockImplementation(() => {
       return { total: 1 }
     })
-    connectToDatabase.mockImplementation(() => {
+
+    mockedConnectToDatabase.mockImplementation(async () => {
       return { db: mockDb, client: mockClient }
     })
 
@@ -82,14 +91,15 @@ describe('Page view preview (/api/page-views-preview?id=$preview)', () => {
   })
 
   it('should no found page, when dont pass slug', async () => {
-    const mockClient = new MockClient()
+    const mockClient = new MockClient('test')
     const mockDb = new MockDb()
     mockClient.isConnected.mockImplementation(() => false)
     mockDb.collection.mockImplementation(() => mockDb)
     mockDb.findOne.mockImplementation(() => {
       return { total: 1 }
     })
-    connectToDatabase.mockImplementation(() => {
+
+    mockedConnectToDatabase.mockImplementation(async () => {
       return { db: mockDb, client: mockClient }
     })
 

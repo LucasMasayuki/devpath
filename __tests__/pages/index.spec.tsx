@@ -1,7 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Index from '@/pages/index'
-import { getStaticProps } from '@/pages/index'
+import Index, { getStaticProps } from '@/pages/index'
 import Author from '@/types/author'
 import Post from '@/types/post'
 

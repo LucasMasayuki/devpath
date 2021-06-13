@@ -23,7 +23,14 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props):
   const views = 0
 
   return (
-    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" shadow="1px 1px #b7b7b7" color="white" m={4}>
+    <Box
+      borderRadius="lg"
+      overflow="hidden"
+      backgroundColor="#011627"
+      boxShadow="0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"
+      color="white"
+      m={4}
+    >
       <Box h={180} w="100%" position="relative">
         <CoverImage title={title} src={coverImage} slug={slug} />
       </Box>

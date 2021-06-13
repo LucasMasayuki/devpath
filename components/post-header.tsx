@@ -17,8 +17,8 @@ type Props = {
 const PostHeader = ({ title, coverImage, date, author, views }: Props): JSX.Element => (
   <>
     <Box>
-      <Center>
-        <Box h={250} position="relative">
+      <Center mt={10} mb={10}>
+        <Box h={250} w={{ base: '100%', lg: '70%' }} position="relative">
           <CoverImage title={title} src={coverImage} />
         </Box>
       </Center>

@@ -2,58 +2,20 @@
 
 exports[`PostPreview should render PostPreview 1`] = `
 <div
-  className="css-dv71fa"
+  className="css-164tvaq"
 >
   <div
     className="css-qy636i"
   >
-    <div
-      style={
-        Object {
-          "bottom": 0,
-          "boxSizing": "border-box",
-          "display": "block",
-          "left": 0,
-          "margin": 0,
-          "overflow": "hidden",
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
-    >
-      <img
-        alt="Cover Image for test"
-        decoding="async"
-        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        style={
-          Object {
-            "border": "none",
-            "bottom": 0,
-            "boxSizing": "border-box",
-            "display": "block",
-            "height": 0,
-            "left": 0,
-            "margin": "auto",
-            "maxHeight": "100%",
-            "maxWidth": "100%",
-            "minHeight": "100%",
-            "minWidth": "100%",
-            "objectFit": undefined,
-            "objectPosition": undefined,
-            "padding": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "visibility": "hidden",
-            "width": 0,
-          }
-        }
-      />
-    </div>
+    <img
+      alt="Cover Image for test"
+      className="chakra-image css-2p2hr9"
+      loading="lazy"
+      src="test.com"
+    />
   </div>
   <div
-    className="css-n16x53"
+    className="css-1vae7t2"
   >
     <div
       className="css-j7qwjs"
@@ -82,6 +44,7 @@ exports[`PostPreview should render PostPreview 1`] = `
           <div
             aria-label="test"
             className="chakra-avatar__initials css-0"
+            role="img"
           >
             t
           </div>
@@ -127,7 +90,7 @@ exports[`PostPreview should render PostPreview 1`] = `
         className="css-1fhgjcy"
       >
         <p
-          className="chakra-text css-1aayjs6"
+          className="chakra-text css-1541wr4"
         >
           test
         </p>

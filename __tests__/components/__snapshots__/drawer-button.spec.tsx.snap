@@ -3,7 +3,7 @@
 exports[`DrawerButton should render DrawerButton 1`] = `
 <button
   aria-label="Menu"
-  className="chakra-button css-1kgd4fd"
+  className="chakra-button css-wpkkii"
   onClick={[Function]}
   type="button"
 >

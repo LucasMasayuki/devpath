@@ -7,10 +7,10 @@ Array [
   </main>,
   <footer>
     <div
-      className="css-14i12oi"
+      className="css-1qgh85w"
     >
       <div
-        className="css-150970n"
+        className="css-1fp0dlw"
       >
         <h2
           className="chakra-heading css-in3yi3"
@@ -40,7 +40,7 @@ Array [
             >
               <button
                 aria-label="My personal github"
-                className="chakra-button css-1kgd4fd"
+                className="chakra-button css-wpkkii"
                 type="button"
               >
                 <svg
@@ -74,7 +74,7 @@ Array [
             >
               <button
                 aria-label="My Linkedin"
-                className="chakra-button css-1kgd4fd"
+                className="chakra-button css-wpkkii"
                 type="button"
               >
                 <svg
