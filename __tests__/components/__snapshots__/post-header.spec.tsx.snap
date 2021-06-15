@@ -27,7 +27,16 @@ exports[`PostHeader should render PostHeader 1`] = `
       test
     </h1>
     <div
-      className="css-f8bcv8"
+      className="css-r3u6lr"
+    >
+      <span
+        className="chakra-badge css-zib6pm"
+      >
+        typescript
+      </span>
+    </div>
+    <div
+      className="css-1yh2cij"
     >
       <span
         className="chakra-avatar css-1ruhx4w"
@@ -47,7 +56,7 @@ exports[`PostHeader should render PostHeader 1`] = `
       </span>
     </div>
     <div
-      className="css-0"
+      className="css-eg4v4b"
     >
       <time
         dateTime="2019-01-01"

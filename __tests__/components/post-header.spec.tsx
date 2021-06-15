@@ -11,7 +11,7 @@ describe('PostHeader', () => {
     }
 
     const component = renderer.create(
-      <PostHeader title="test" coverImage="test" date="2019-01-01" author={author} views={1} />,
+      <PostHeader title="test" coverImage="test" date="2019-01-01" author={author} views={1} tags={['typescript']} />,
     )
 
     const tree = component.toJSON()

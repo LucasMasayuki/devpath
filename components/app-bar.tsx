@@ -1,7 +1,6 @@
 import React from 'react'
-import { Flex, Box, Heading, Spacer } from '@chakra-ui/react'
+import { Flex, Box, Heading } from '@chakra-ui/react'
 import Link from 'next/link'
-import DrawerButton from '@/components/drawer-button'
 import { APP_NAME } from '@/lib/constants'
 
 const AppBar = (): JSX.Element => (
@@ -13,10 +12,6 @@ const AppBar = (): JSX.Element => (
             {APP_NAME}
           </Link>
         </Heading>
-      </Box>
-      <Spacer />
-      <Box>
-        <DrawerButton />
       </Box>
     </Flex>
   </Box>

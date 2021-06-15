@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorAvatar should render AuthorAvatar 1`] = `
+<div
+  className="css-1yh2cij"
+>
+  <span
+    className="chakra-avatar css-1ruhx4w"
+  >
+    <div
+      aria-label="test"
+      className="chakra-avatar__initials css-0"
+      role="img"
+    >
+      t
+    </div>
+  </span>
+  <span
+    className="css-xf6agq"
+  >
+    test
+  </span>
+</div>
+`;

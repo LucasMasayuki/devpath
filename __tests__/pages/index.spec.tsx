@@ -22,6 +22,7 @@ describe('Index', () => {
       ogImage: {
         url: 'test',
       },
+      tags: ['test'],
     }
 
     const posts: Post[] = [post]

@@ -9,6 +9,7 @@ author:
   picture: '/author/lucas-tamaribuchi.jpg'
 ogImage:
   url: '/public/landing.png'
+tags: ['typescript']
 ---
 
 Promises are an essential concept of JavaScript. They are present in virtually the entire language ecosystem.

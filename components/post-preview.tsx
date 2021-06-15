@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
-import { Avatar, Box, Link as ChakraLink, Text, Flex, Heading } from '@chakra-ui/react'
+import { Box, Link as ChakraLink, Text, Flex, Heading, Spacer } from '@chakra-ui/react'
 
 import DateFormatter from '@/components/date-formatter'
 import CoverImage from '@/components/cover-image'
 import PostViews from '@/components/post-views'
 import Author from '@/types/author'
+import AuthorAvatar from './author-avatar'
+import BadgeBox from './badge-box'
 
 type Props = {
   title: string
@@ -14,9 +16,10 @@ type Props = {
   excerpt: string
   author: Author
   slug: string
+  tags: Array<string>
 }
 
-const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props): JSX.Element => {
+const PostPreview = ({ title, coverImage, date, excerpt, author, slug, tags }: Props): JSX.Element => {
   // const { data } = useFetch(`/api/page-views-preview?id=${slug}`, true)
 
   // const views = data?.total
@@ -43,17 +46,14 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props):
               </Link>
             </Heading>
           </Box>
-          <Box d="flex" mb={4} mt={2} alignItems="center">
-            <Avatar size="sm" name={author.name} src={author.picture} />
-            <Box as="span" fontSize="sm" ml={3}>
-              {author.name}
-            </Box>
-          </Box>
+          <BadgeBox tags={tags} />
+          <Spacer />
+          <AuthorAvatar author={author} />
           <Box mt="1">
             <DateFormatter dateString={date} /> - <PostViews>{`${views >= 0 ? views : '...'} views`}</PostViews>
           </Box>
           <Box mt="4">
-            <Text noOfLines={3} isTruncated>
+            <Text noOfLines={3} isTruncated whiteSpace="normal">
               {excerpt}
             </Text>
           </Box>

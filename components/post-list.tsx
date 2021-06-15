@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid } from '@chakra-ui/react'
 import PostPreview from '@/components/post-preview'
 import Post from '@/types/post'
 
@@ -19,6 +19,7 @@ const PostList = ({ posts }: Props): JSX.Element => {
           author={post.author}
           slug={post.slug}
           excerpt={post.excerpt}
+          tags={post.tags}
         />
       ))}
     </Grid>

@@ -36,6 +36,18 @@ exports[`PostPreview should render PostPreview 1`] = `
         </h3>
       </div>
       <div
+        className="css-r3u6lr"
+      >
+        <span
+          className="chakra-badge css-zib6pm"
+        >
+          typescript
+        </span>
+      </div>
+      <div
+        className="css-17xejub"
+      />
+      <div
         className="css-1yh2cij"
       >
         <span
@@ -90,7 +102,7 @@ exports[`PostPreview should render PostPreview 1`] = `
         className="css-1fhgjcy"
       >
         <p
-          className="chakra-text css-1541wr4"
+          className="chakra-text css-gt4f2t"
         >
           test
         </p>

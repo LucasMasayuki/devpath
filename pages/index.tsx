@@ -44,7 +44,7 @@ type StaticProps = {
 }
 
 export const getStaticProps = (): StaticProps => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt'])
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt', 'tags'])
 
   return {
     props: { allPosts },

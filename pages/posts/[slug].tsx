@@ -71,6 +71,7 @@ const Post = ({ post }: Props): JSX.Element => {
                 author={post.author}
                 // views={data?.total}
                 views={1}
+                tags={post.tags}
               />
               <PostBody content={post.content} />
             </Box>
@@ -84,7 +85,16 @@ const Post = ({ post }: Props): JSX.Element => {
 export default Post
 
 export async function getStaticProps({ params }: Params): Promise<StaticProps> {
-  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'author', 'content', 'ogImage', 'coverImage'])
+  const post = getPostBySlug(params.slug, [
+    'title',
+    'date',
+    'slug',
+    'author',
+    'content',
+    'ogImage',
+    'coverImage',
+    'tags',
+  ])
 
   const content = await markdownToHtml(post.content || '')
 

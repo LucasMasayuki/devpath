@@ -22,6 +22,7 @@ describe('PostPreview', () => {
       ogImage: {
         url: 'test',
       },
+      tags: ['typescript'],
     }
 
     const component = renderer.create(
@@ -32,6 +33,7 @@ describe('PostPreview', () => {
         excerpt={post.excerpt}
         author={post.author}
         slug={post.slug}
+        tags={post.tags}
       />,
     )
 

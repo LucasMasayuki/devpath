@@ -39,6 +39,18 @@ exports[`PostList should render PostList 1`] = `
           </h3>
         </div>
         <div
+          className="css-r3u6lr"
+        >
+          <span
+            className="chakra-badge css-1c65e2g"
+          >
+            test
+          </span>
+        </div>
+        <div
+          className="css-17xejub"
+        />
+        <div
           className="css-1yh2cij"
         >
           <span
@@ -93,7 +105,7 @@ exports[`PostList should render PostList 1`] = `
           className="css-1fhgjcy"
         >
           <p
-            className="chakra-text css-1541wr4"
+            className="chakra-text css-gt4f2t"
           >
             test
           </p>

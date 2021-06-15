@@ -8,6 +8,7 @@ author:
   picture: '/author/lucas-tamaribuchi.jpg'
 ogImage:
   url: '/cover-images/by-the-road.png'
+tags: ['typescript']
 ---
 
 The road of a developer can be a short or long journey, from intern to senior, from developer to CEO of a startup, the paths are multiple and start to track them can be from a confusing and distressing beginning.
