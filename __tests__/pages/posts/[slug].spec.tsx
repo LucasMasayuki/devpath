@@ -38,6 +38,7 @@ describe('Post', () => {
       ogImage: {
         url: 'test',
       },
+      tags: ['test'],
     }
 
     const component = renderer.create(<PostPage post={post} />)

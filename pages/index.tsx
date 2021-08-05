@@ -8,6 +8,7 @@ import Layout from '@/components/layout'
 import { getAllPosts } from '@/lib/api'
 import Post from '@/types/post'
 import IndexHeader from '@/components/index-header'
+import { GetStaticPropsContext } from 'next'
 
 type Props = {
   allPosts: Post[]
@@ -43,8 +44,8 @@ type StaticProps = {
   }
 }
 
-export const getStaticProps = (): StaticProps => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt', 'tags'])
+export const getStaticProps = (context: GetStaticPropsContext): StaticProps => {
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt', 'tags'], context.locale)
 
   return {
     props: { allPosts },

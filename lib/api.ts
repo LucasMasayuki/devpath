@@ -8,13 +8,13 @@ type Items = {
   [key: string]: string
 }
 
-export function getPostSlugs(): string[] {
-  return fs.readdirSync(postsDirectory)
+export function getPostSlugs(locale: string): string[] {
+  return fs.readdirSync(`${postsDirectory}/${locale}`)
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []): Items {
+export function getPostBySlug(slug: string, fields: string[] = [], locale = 'en-US'): Items {
   const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
+  const fullPath = join(postsDirectory, locale, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
@@ -37,11 +37,12 @@ export function getPostBySlug(slug: string, fields: string[] = []): Items {
   return items
 }
 
-export function getAllPosts(fields: string[] = []): Items[] {
-  const slugs = getPostSlugs()
+export function getAllPosts(fields: string[] = [], locale = 'en-US'): Items[] {
+  const slugs = getPostSlugs(locale)
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
+    .map((slug) => getPostBySlug(slug, fields, locale))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+
   return posts
 }

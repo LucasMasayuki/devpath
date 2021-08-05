@@ -41,7 +41,7 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug, tags }: P
         <Flex direction="column">
           <Box>
             <Heading mt="1" fontWeight="semibold" as="h3" lineHeight="tight">
-              <Link as={`/posts/${slug}`} href="/posts/[slug]">
+              <Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
                 <ChakraLink>{title}</ChakraLink>
               </Link>
             </Heading>
