@@ -7,7 +7,7 @@ const Footer = (): JSX.Element => (
   <footer>
     <Box bgColor="secondaryDarkColor" color="white" pr={4} pl={4} pb={2} pt={2}>
       <SimpleGrid columns={2} spacing={10} alignItems="center">
-        <Heading size="sm" fontWeight="bold">
+        <Heading size="sm" fontWeight="bold" fontFamily="monospace">
           {APP_NAME}
         </Heading>
         <Grid templateColumns="repeat(5, 1fr)">

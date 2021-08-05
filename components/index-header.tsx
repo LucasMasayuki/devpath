@@ -12,8 +12,10 @@ const IndexHeader = (): JSX.Element => (
     h="md"
     backgroundColor="primaryColor"
   >
-    <Heading as="h1">{APP_NAME}</Heading>
-    <Code fontSize="md" mt="8">
+    <Heading as="h1" fontFamily="monospace">
+      {APP_NAME}
+    </Heading>
+    <Code fontSize="md" mt="8" fontFamily="monospace">
       // Developer in eternal evolution
     </Code>
   </Box>

@@ -7,7 +7,7 @@ const AppBar = (): JSX.Element => (
   <Box bgColor="secondDarkColor" w="100%" color="white" p={4} boxShadow="0px 0px 8px 2px #000000">
     <Flex>
       <Box p="2">
-        <Heading size="md" fontWeight="bold">
+        <Heading fontFamily="monospace" size="md" fontWeight="bold">
           <Link as="/" href="/">
             {APP_NAME}
           </Link>

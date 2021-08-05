@@ -9,7 +9,7 @@ type Props = {
 const Layout = ({ children }: Props): JSX.Element => (
   <>
     <Meta />
-    <main>{children}</main>
+    <main style={{ fontFamily: 'monospace' }}>{children}</main>
     <Footer />
   </>
 )

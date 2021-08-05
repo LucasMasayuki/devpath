@@ -9,7 +9,7 @@ type Props = {
 
 const PostList = ({ posts }: Props): JSX.Element => {
   return (
-    <Grid templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }} gap={4}>
+    <Grid templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }} gap={4}>
       {posts.map((post) => (
         <PostPreview
           key={post.slug}
